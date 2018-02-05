@@ -17,3 +17,32 @@ class ContactCourse(forms.Form):
             }
         message = message % context
         send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, [settings.CONTACT_EMAIL])
+
+'''
+    ERRO:
+    KeyError at /cursos/Django2-Python/
+
+'name'
+
+Request Method: 	POST
+Request URL: 	http://127.0.0.1:8000/cursos/Django2-Python/
+Django Version: 	2.0.1
+Exception Type: 	KeyError
+Exception Value:
+
+'name'
+
+Exception Location: 	/Users/Son/Documents/Python/django/RedeSocial/Simplemooc/Simplemooc/courses/forms.py in send_mail, line 18
+Python Executable: 	/Users/Son/Documents/Python/django/RedeSocial/venv/bin/python3
+Python Version: 	3.6.1
+Python Path:
+
+['/Users/Son/Documents/Python/django/RedeSocial/Simplemooc',
+ '/Users/Son/Documents/Python/django/RedeSocial/venv/lib/python36.zip',
+ '/Users/Son/Documents/Python/django/RedeSocial/venv/lib/python3.6',
+ '/Users/Son/Documents/Python/django/RedeSocial/venv/lib/python3.6/lib-dynload',
+ '/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6',
+ '/Users/Son/Documents/Python/django/RedeSocial/venv/lib/python3.6/site-packages']
+
+Server time: 	Seg, 5 Fev 2018 11:21:23 +0000
+'''
