@@ -11,6 +11,7 @@ urlpatterns = [
     #path(r'contato/',views.contacts, name='contato'),
     path(r'', include('Simplemooc.core.urls',namespace='Simplemooc')),
     path(r'cursos/',include('Simplemooc.courses.urls',namespace='Courses')),
+    path(r'conta/',include('Simplemooc.accounts.urls',namespace='Accounts')),
     path('admin/', admin.site.urls),
 ]
 

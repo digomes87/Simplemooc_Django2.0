@@ -40,7 +40,8 @@ INSTALLED_APPS = [
 
 #App criados para a aplicaçao
     'Simplemooc.core',
-    'Simplemooc.courses'
+    'Simplemooc.courses',
+    'Simplemooc.accounts',
 ]
 
 MIDDLEWARE = [
