@@ -10,17 +10,21 @@
     <link rel="stylesheet" href="{% static 'css/styles.css'%}" />
 </head>
 <body>
-<div class="header">
-    <div class="pure-menu pure-menu-open pure-menu-fixed pure-menu-horizontal">
-        <a class="pure-menu-heading" href="{% url 'Simplemooc:home' %}">SIMPLE MOOC</a>
-        <ul>
-            <li class="pure-menu-selected"><a href="{% url 'Simplemooc:home' %}">Início</a></li>
-            <li><a href="{% url 'Courses:index' %}">Cursos</a></li>
-            <li><a href="{% url 'Simplemooc:contato' %}">Contato</a></li>
-            <li><a href="{% url 'Accounts:accounts' %}">Conta</a></li>
-        </ul>
-    </div>
-</div>
+  <div class="header">
+      <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+          <a class="pure-menu-heading" href="{% url 'Simplemooc:home' %}">SIMPLE MOOC</a>
+          <ul>
+              <li class="pure-menu-selected"><a href="{% url 'Simplemooc:home' %}">Início</a></li>
+              <li><a href="{% url 'Courses:index' %}">Cursos</a></li>
+              <li><a href="{% url 'Accounts:details' %}">Contato</a></li>
+              {% if user.is_authenticated %}
+              <li><a href="{% url 'Accounts:logout' %}">Sair</a></li>
+              {% else %}
+              <li><a href="{% url 'Accounts:login' %}">Entrar</a></li>
+              {% endif %}
+          </ul>
+      </div>
+  </div>
 <div class="content">
 {% block content %} {% endblock %}
     <div class="footer">

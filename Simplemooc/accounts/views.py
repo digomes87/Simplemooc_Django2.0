@@ -15,10 +15,13 @@ def accounts(request):
                 username=user.username, password=form.cleaned_data['password1']
             )
             login(request, user)
-            return redirect('core:home')
+            return redirect('Simplemooc:home')
     else:
         form = RegisterForm()
     context = {
         'form': form
     }
     return render(request, template_name, context)
+
+def passar()
+pass
